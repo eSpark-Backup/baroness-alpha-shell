@@ -1,7 +1,7 @@
 // React
 import React, { useContext } from 'react'
 // React Native
-import { View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 // Contexts
 import GlobalContext from '../contexts/GlobalContext'
 // Icon
@@ -11,22 +11,20 @@ const AllAppsIcon = () => {
   const { toggleDisplayAllApps } = useContext(GlobalContext)
 
   return (
-    <View
-      style={{
-        marginRight: 5,
-        flexDirection: 'row',
-        alignItems: 'center',
-      }}>
-      <View
-        style={{
-          padding: 5,
-          borderRadius: 50,
-          backgroundColor: '#fff',
-        }}>
-        <Icon name='dots-hexagon' size={35} color='#000' onPress={toggleDisplayAllApps} />
-      </View>
+    <View style={styles.wrapper}>
+      <Icon style={styles.icon} name='dots-hexagon' size={35} color='#000' onPress={toggleDisplayAllApps} />
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  wrapper: {
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  icon: {
+    margin: 5,
+  },
+})
 
 export default AllAppsIcon
