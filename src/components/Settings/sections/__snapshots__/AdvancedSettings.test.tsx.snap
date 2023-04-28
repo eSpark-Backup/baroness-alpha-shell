@@ -78,6 +78,7 @@ exports[`<AdvancedSettings /> Tests should render correctly and match snapshot 1
               undefined,
             ]
           }
+          testID="wrapper"
         >
           <Text
             style={
@@ -88,6 +89,7 @@ exports[`<AdvancedSettings /> Tests should render correctly and match snapshot 1
                 undefined,
               ]
             }
+            testID="title"
           >
             Reload all apps
           </Text>
@@ -151,6 +153,7 @@ exports[`<AdvancedSettings /> Tests should render correctly and match snapshot 1
               undefined,
             ]
           }
+          testID="wrapper"
         >
           <Text
             style={
@@ -161,6 +164,7 @@ exports[`<AdvancedSettings /> Tests should render correctly and match snapshot 1
                 undefined,
               ]
             }
+            testID="title"
           >
             Reset settings
           </Text>
