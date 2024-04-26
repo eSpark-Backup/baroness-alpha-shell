@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { StatusBar, StyleSheet, View } from 'react-native'
+import { ActivityIndicator, Image, StatusBar, StyleSheet, Text, View } from 'react-native'
 import { useDispatch } from 'react-redux'
-import BottomContainer from './containers/BottomContainer'
-import TopContainer from './containers/TopContainer'
 import SearchContext from './contexts/SearchContext'
 import { useBackHandler } from './hooks/useBackHandler'
 import { usePackageChange } from './hooks/usePackageChange'
@@ -39,10 +37,23 @@ const Home = () => {
 
   usePackageChange((packageChange: PackageChange) => setPackageChanged(packageChange))
 
+  //! old Rootview
+  // return (
+  //   <View style={styles.wrapper}>
+  //     {/* <TopContainer />
+  //     <BottomContainer /> */}
+  //   </View>
+  // )
+
+  //!? new RootView
   return (
     <View style={styles.wrapper}>
-      <TopContainer />
-      <BottomContainer />
+      <StatusBar hidden />
+      <Image source={require('./assets/images/logo.png')} style={{ height: 150, width: 150 }} resizeMode='contain' />
+      <ActivityIndicator size={40} color={'#d84222'} />
+      <Text style={styles.text}>Installing Application, Please wait...</Text>
+      {/* <TopContainer />
+      <BottomContainer /> */}
     </View>
   )
 }
@@ -51,9 +62,17 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     padding: 5,
+    gap: 20,
     overflow: 'hidden',
-    marginTop: StatusBar.currentHeight,
-    justifyContent: 'flex-end',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#1d1b20',
+    // marginTop: StatusBar.currentHeight,
+  },
+  text: {
+    fontSize: 16,
+    color: '#d84222',
+    letterSpacing: 2,
   },
 })
 
