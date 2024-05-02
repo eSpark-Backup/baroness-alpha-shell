@@ -31,6 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             List<ReactPackage> packages = new PackageList(this).getPackages();
             packages.add(new CustomAppPackage());
+            packages.add(new InstallationPackage()); // Add your custom package here
             return packages;
         }
 
