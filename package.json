@@ -54,7 +54,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react-native": "^4.0.0",
     "jest": "^30.4.2",
-    "metro-react-native-babel-preset": "0.73.9",
+    "metro-react-native-babel-preset": "0.77.0",
     "prettier": "^3.8.4",
     "prettier-plugin-organize-imports": "^4.3.0",
     "ts-jest": "^29.0.5",
